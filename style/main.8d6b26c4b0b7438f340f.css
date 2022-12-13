@@ -1788,7 +1788,7 @@ img {
 
     /* My style start */
     .header__timer {
-        font-size: 14px !important;
+        font-size: 16px !important;
     }
 
     .anime-text {
@@ -1809,6 +1809,16 @@ img {
 }
 
 @media (max-width: 400px) {
+    .anime-text {
+        font-size: 17px !important;
+    }
+}
+
+@media (max-width: 359px) {
+    .header__timer {
+        font-size: 14px !important;
+    }
+
     .anime-text {
         font-size: 15px !important;
     }
