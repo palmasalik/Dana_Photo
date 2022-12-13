@@ -355,3 +355,61 @@ var first_namespaceObject = __webpack_require__.p + "video/first1e27f49a8698c142
 }();
 /******/ })()
 ;
+
+// MY Script
+// MY Script
+// MY Script
+// MY Script
+// MY Script
+// MY Script
+
+let headerTimer = document.querySelector('.header__timer-extra');
+
+increase()
+
+function increase(e) {
+    if (headerTimer.innerHTML >= -10 && headerTimer.innerHTML < 15) {
+        setTimeout(() => {
+            headerTimer.innerHTML++
+            increase(90)
+        }, e);
+    } else if (headerTimer.innerHTML >= 15 && headerTimer.innerHTML < 35) {
+        setTimeout(() => {
+            headerTimer.innerHTML++
+            increase(100)
+        }, e);
+    }
+}
+
+
+
+// My typing
+// My typing
+// My typing
+
+function typing(el, duration = 400){
+  let element = el instanceof HTMLElement ? el : document.querySelector(el);
+  let text = element.textContent;
+  let span = document.createElement('span');
+  span.classList.add('span');
+  let height = window.getComputedStyle(element).getPropertyValue('font-size');
+  span.style.height = height;
+  let index = 0;
+  let interval;
+  element.innerHTML = '';
+  element.append(span);
+  function type(){
+      if(index < text.length){
+          let item = document.createElement('span');
+          item.classList.add('anime-text');
+          if(text[index] !== ' ') item.innerHTML = text[index];
+          else item.innerHTML = '&nbsp;';
+          item.style.animationDuration = duration + 'ms';
+          span.insertAdjacentElement('beforebegin', item);
+          index++;
+          interval = setTimeout(type, duration / 2);
+      }else clearTimeout(interval);
+  }
+  type();
+}
+typing('.text', 200);
